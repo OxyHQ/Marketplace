@@ -11,11 +11,11 @@ type Props = {
 function SocialMedias({ containerClassName, itemsClassName }: Props) {
   return (
     <div className={cn("flex gap-x-5", containerClassName)}>
-      <Link href="https://github.com/clonglam/HIYORI-master" target="_blank">
+      <Link href="https://github.com/clonglam/SHOPPI-master" target="_blank">
         <Icons.gitHub
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName,
+            itemsClassName
           )}
         />
       </Link>
@@ -24,7 +24,7 @@ function SocialMedias({ containerClassName, itemsClassName }: Props) {
         <Icons.twitter
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName,
+            itemsClassName
           )}
         />
       </Link>
@@ -33,7 +33,7 @@ function SocialMedias({ containerClassName, itemsClassName }: Props) {
         <Icons.globe
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName,
+            itemsClassName
           )}
         />
       </Link>

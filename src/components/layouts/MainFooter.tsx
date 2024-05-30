@@ -65,11 +65,11 @@ function MainFooter({}: Props) {
       ],
     },
     {
-      title: "About HIYORI",
+      title: "About SHOPPI",
       items: [
         {
           title: "Our Story",
-          href: "https://github.com/clonglam/HIYORI-master",
+          href: "https://github.com/clonglam/SHOPPI-master",
           items: [],
         },
         {

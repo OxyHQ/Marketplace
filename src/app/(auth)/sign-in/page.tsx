@@ -15,8 +15,8 @@ import { SigninForm } from "@/features/auth";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "HIYORI | Sign In",
-  description: "Sign in to HIYORI",
+  title: "SHOPPI | Sign In",
+  description: "Sign in to SHOPPI",
 };
 
 export default function SignInPage() {

@@ -5,9 +5,9 @@ import { slugify } from "@/lib/utils";
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "HIYORI",
+  name: "SHOPPI",
   description: "Ecommerce Application built with NextJS 14",
-  url: "https://hiyori.hugo-coding.com",
+  url: "https://shoppi.hugo-coding.com",
   address: "1600 Amphitheatre Parkway in Mountain View, California",
   phone: "+1(234)-567-8901",
   email: "hello@hugo-coding.com",
@@ -20,13 +20,13 @@ export const siteConfig = {
     },
     {
       title: "Our Story",
-      href: "https://github.com/clonglam/HIYORI-master",
+      href: "https://github.com/clonglam/SHOPPI-master",
       description: "Our Story.",
       items: [],
     },
     {
       title: "Brands & Designers",
-      href: "https://github.com/clonglam/HIYORI-master",
+      href: "https://github.com/clonglam/SHOPPI-master",
       description: "Read our latest blog posts.",
       items: [],
     },
