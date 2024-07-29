@@ -15,7 +15,7 @@ function SocialMedias({ containerClassName, itemsClassName }: Props) {
         <Icons.gitHub
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName
+            itemsClassName,
           )}
         />
       </Link>
@@ -24,7 +24,7 @@ function SocialMedias({ containerClassName, itemsClassName }: Props) {
         <Icons.twitter
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName
+            itemsClassName,
           )}
         />
       </Link>
@@ -33,7 +33,7 @@ function SocialMedias({ containerClassName, itemsClassName }: Props) {
         <Icons.globe
           className={cn(
             "w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary",
-            itemsClassName
+            itemsClassName,
           )}
         />
       </Link>

@@ -133,7 +133,7 @@ function HeroSection() {
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "border-2 border-white text-white rounded px-8 py-3 ",
                 "md:px-16 md:py-6",
-                "hover:text-zinc-600 hover:bg-white"
+                "hover:text-zinc-600 hover:bg-white",
               )}
             >
               New in
@@ -145,7 +145,7 @@ function HeroSection() {
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "border-2 border-primary text-white rounded px-8 py-3 ",
-                "md:px-16 md:py-6"
+                "md:px-16 md:py-6",
               )}
             >
               View the Code
@@ -176,7 +176,7 @@ function ProductSubCollectionsCircles({ collections }: CollectionsCardsProps) {
           <div
             className={cn(
               "relative bg-secondary rounded-full flex justify-center items-center",
-              "w-[280px] h-[280px]"
+              "w-[280px] h-[280px]",
               // "md:w-[320px] md:h-[320px]"
               // "lg:w-[360px] lg:h-[360px]"
             )}
@@ -188,7 +188,7 @@ function ProductSubCollectionsCircles({ collections }: CollectionsCardsProps) {
               height={320}
               className={cn(
                 "object-center object-cover hover:scale-105 transition-all duration-500",
-                "w-[240px] h-[240px]"
+                "w-[240px] h-[240px]",
                 // "md:w-[280px] md:h-[280px]",
                 // "lg:w-[320px] lg:h-[320px]"
               )}
