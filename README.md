@@ -2,9 +2,9 @@
 
 > We are Keep developing the project.
 
-# Peable Shopping - E-commerce with Custom CMS
+# Oxy Marketplace - E-commerce with Custom CMS
 
-[Shopping](https://Shopping.hugo-coding.com) is a cutting-edge e-commerce platform equipped with a custom Content Management System (CMS), designed to provide an exceptional online shopping experience. Built using the latest web technologies such as Next.js 14, GraphQL, Supabase, Drizzle, ShadcnUI, and TailwindCSS, Shopping offers seamless, fast, and responsive interactions across all devices.
+[Marketplace](https://marketplace.oxy.so) is a cutting-edge e-commerce platform equipped with a custom Content Management System (CMS), designed to provide an exceptional online shopping experience. Built using the latest web technologies such as Next.js 14, GraphQL, Supabase, Drizzle, ShadcnUI, and TailwindCSS, Shopping offers seamless, fast, and responsive interactions across all devices.
 
 ## Features
 
@@ -54,13 +54,13 @@ To get a local copy up and running, follow these simple steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/PeableOfficial/Shopping.git
+   git clone https://github.com/OxyHQ/Marketplace.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd Shopping
+   cd Marketplace
    ```
 
 3. Install dependencies:
@@ -82,9 +82,9 @@ We welcome contributions to Shopping! Please read our Contributing Guide for det
 
 ## License
 
-Shopping is licensed under the MIT License. See the license file for more information.
+Marketplace is licensed under the MIT License. See the license file for more information.
 
 ## Acknowledgments
 
-- Special thanks to all libraries and frameworks that made Shopping possible.
-- Shoutout to the community for supporting and using Shopping.
+- Special thanks to all libraries and frameworks that made Marketplace possible.
+- Shoutout to the community for supporting and using Marketplace.
