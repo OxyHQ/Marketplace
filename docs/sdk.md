@@ -118,21 +118,20 @@ contract the backend at that commit does not serve.
 
 The concurrency group never cancels an in-flight publish.
 
-### Authentication: trusted publishing, not a token
+### Authentication
 
 **0.1.0 was published by hand** (2026-09-13), from the exact tarball
-`smoke.mjs --out` produced at `main` `5547181e`. The workflow could not: the
-org-wide `NPM_TOKEN` has no write access to the `@mercaria.co` scope, and the
-registry answers that with `404 PUT`, not `403` — the same 404 a missing scope
-gives, so read it as "no permission" first.
+`smoke.mjs --out` produced at `main` `5547181e` — the way the other Oxy SDKs
+are released. The workflow could not: the org-wide `NPM_TOKEN` has no write
+access to the `@mercaria.co` scope, and the registry answers that with
+`404 PUT`, not `403` — the same 404 a missing scope gives, so read it as "no
+permission" first.
 
-Releases after 0.1.0 authenticate through npm **trusted publishing** (OIDC): on
-npmjs.com, `@mercaria.co/sdk` → Settings → Trusted publisher → GitHub Actions,
-repository `OxyHQ/Mercaria`, workflow `publish-sdk.yml`. The npm CLI prefers the
-OIDC exchange over `NODE_AUTH_TOKEN` whenever a trusted publisher matches, so
-the workflow needs no change. Creating that relationship needs a 2FA session:
-a granular token that bypasses 2FA gets `403` from `npm trust`, which is why it
-is a manual step rather than something a script did.
+For the workflow to publish, `NPM_TOKEN` needs write access to `@mercaria.co`.
+Until then a release is a manual `npm publish ./<tarball> --access public` of
+the tarball `bun run smoke:sdk -- --out <dir>` keeps. npm now warns that tokens
+which bypass 2FA are being restricted for direct publishing; if that lands,
+this section is where the replacement gets written down.
 
 `prepublishOnly` (typecheck, test, build, smoke) guards a manual
 `npm publish` from `packages/sdk`, but that path publishes the unstaged
