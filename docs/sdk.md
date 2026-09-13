@@ -112,10 +112,27 @@ contract the backend at that commit does not serve.
    succeeds and publishes nothing**, so re-runs and doc-only changes are safe.
    A registry error other than 404 stops the job rather than being read as
    "not published".
-4. `npm publish <tested tarball> --provenance --access public`, authenticated by
-   the org-wide `NPM_TOKEN` secret, with `id-token: write` for provenance.
+4. `npm publish ./<tested tarball> --provenance --access public`, with
+   `id-token: write`. The `./` is load-bearing: npm reads a bare
+   `sdk-release/x.tgz` as the GitHub shorthand `owner/repo` (#1021).
 
 The concurrency group never cancels an in-flight publish.
+
+### Authentication: trusted publishing, not a token
+
+**0.1.0 was published by hand** (2026-09-13), from the exact tarball
+`smoke.mjs --out` produced at `main` `5547181e`. The workflow could not: the
+org-wide `NPM_TOKEN` has no write access to the `@mercaria.co` scope, and the
+registry answers that with `404 PUT`, not `403` — the same 404 a missing scope
+gives, so read it as "no permission" first.
+
+Releases after 0.1.0 authenticate through npm **trusted publishing** (OIDC): on
+npmjs.com, `@mercaria.co/sdk` → Settings → Trusted publisher → GitHub Actions,
+repository `OxyHQ/Mercaria`, workflow `publish-sdk.yml`. The npm CLI prefers the
+OIDC exchange over `NODE_AUTH_TOKEN` whenever a trusted publisher matches, so
+the workflow needs no change. Creating that relationship needs a 2FA session:
+a granular token that bypasses 2FA gets `403` from `npm trust`, which is why it
+is a manual step rather than something a script did.
 
 `prepublishOnly` (typecheck, test, build, smoke) guards a manual
 `npm publish` from `packages/sdk`, but that path publishes the unstaged
